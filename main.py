@@ -5,10 +5,10 @@ from aiogram import Bot, Dispatcher, executor, types
 
 
 #log
-logging.basicConfig(level=logging.INFO, parse_mode='html')
+logging.basicConfig(level=logging.INFO)
 
 #init
-bot = Bot(token=config.token)
+bot = Bot(token=config.token, parse_mode='html')
 dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
